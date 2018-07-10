@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editText"
+            android:onClick="sender"
+            android:text="Send"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="286dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="Message"
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@+id/sender"
+            tools:layout_editor_absoluteY="11dp" />
+
+        <TextView
+            android:id="@+id/OreNoMessage"
+            android:layout_below="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="67dp"
+            android:scrollbars="vertical"/>
+
+        <TextView
+            android:id="@+id/Chat"
+            android:layout_below="@+id/OreNoMessage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="301dp"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
