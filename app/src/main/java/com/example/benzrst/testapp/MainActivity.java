@@ -39,15 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
 //    Android Sender
     public void sender(View v){
-//        status = false;
-        myThread.interrupt();
+//        myThread.interrupt();
         MessageSender messageSender = new MessageSender();
         text=editText.getText().toString();
         messageSender.execute(text);
         message.setText(text);
         editText.setText("");
-//        status = true;
-//        myThread.start();
+//        myThread.run();
     }
 //  Android Reciever
     class MyServerThread implements Runnable {
@@ -60,13 +58,11 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             try {
                 ss = new ServerSocket(8000);
-//                while (true){
-                while (status){
+                while (true){
                     s = ss.accept();
                     isr = new InputStreamReader(s.getInputStream());
                     br = new BufferedReader(isr);
                     message = br.readLine();
-                    Log.d("Message",message);
                     h.post(new Runnable() {
                         @Override
                         public void run() {
@@ -75,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
                     });
                     s.close();
                 }
-                ss.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

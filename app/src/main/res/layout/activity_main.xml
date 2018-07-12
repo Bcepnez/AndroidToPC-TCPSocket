@@ -32,24 +32,38 @@
 
         <TextView
             android:id="@+id/OreNoMessage"
-            android:layout_below="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_below="@+id/editText"
+            android:scrollbars="vertical"
             android:text="TextView"
+            android:textSize="24sp"
             tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="67dp"
-            android:scrollbars="vertical"/>
+            tools:layout_editor_absoluteY="67dp" />
 
         <TextView
             android:id="@+id/Chat"
-            android:layout_below="@+id/OreNoMessage"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="301dp"
+            android:layout_below="@+id/OreNoMessage"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="3dp"
+            android:scrollbarStyle="insideOverlay"
             android:scrollbars="vertical"
-            android:scrollbarStyle="insideOverlay"/>
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="244dp"
+            android:text="Message from PC :" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
